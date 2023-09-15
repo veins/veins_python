@@ -4,14 +4,14 @@ Sample combination of Veins and Python
 
 ## Supported program versions ##
 
-- Veins 5.0 (see <http://veins.car2x.org/>)
-- OMNeT++ 5.5.1 (see <https://omnetpp.org/>)
-- Python 3.6 (see <https://www.python.org/>)
+- Veins 5.2 (see <http://veins.car2x.org/>)
+- OMNeT++ 6.0.1 (see <https://omnetpp.org/>)
+- Python 3.11.2 (see <https://www.python.org/>)
 
 ## Supported platforms ##
 
 - Windows 10
-- Debian 10
+- Debian 12
 - macOS 10.15
 
 ## Setup ##
@@ -24,13 +24,13 @@ Use the same command line window for entering any of the following commands.
 
 In the command line window, change to the `veins_python` directory.
 
-Configure the build system by running
+Configure the build system by running (assuming you built Veins in `../veins`)
 ```
-./configure
+./configure --with-veins=../veins
 ```
 
-- If you receive errors about `Python.h` not being found, make sure that you have installed Python along with its headers (e.g., on Debian Linux you might need to install `libpython3.7-dev` or similar)
-- The configure script adopts settings from the Python interpreter it is running under. If you want to use a different Python interpreter, execute the script as, e.g., `python3.8 ./configure`.
+- If you receive errors about `Python.h` not being found, make sure that you have installed Python along with its headers (e.g., on Debian Linux you might need to install `libpython3.11-dev` or similar)
+- The configure script adopts settings from the Python interpreter it is running under. If you want to use a different Python interpreter, execute the script as, e.g., `python3.11 ./configure`.
 
 Build `veins_python` by running
 ```
